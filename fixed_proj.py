@@ -8,7 +8,6 @@ from scipy.linalg import hadamard
 class HadamardProj(nn.Module):
 
     def __init__(self, input_size, output_size, bias=True, init_scale=10):
-
         super(HadamardProj, self).__init__()
         if init_scale is not None:
             self.weight = nn.Parameter(torch.Tensor(1).fill_(init_scale))
